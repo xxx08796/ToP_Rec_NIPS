@@ -1,0 +1,111 @@
+leaf_combine: |
+  I have built a system to categorize tweets, 
+  For each category of tweets, a multi-dimensional tree structure has been created, with a hierarchical division from broad to detailed classification criteria.
+  For simplicity, The structure of the tree is given as a list of all possible classification paths in this format:
+  EXAMPLE PATHS:
+  [
+    {{"path": "Technology > AI > Natural Language Processing"}},
+    {{"path": "Technology > Blockchain > Ethereum"}},
+    {{"path": "Business > Startups > Seed Funding"}}
+  ]
+  After the tree is built, the system will assign tweets to the leaf nodes based on the classification paths.
+  Now, we have two leaf nodes that are under-loaded, meaning they both have too few tweets assigned to them. 
+  Your task is to combine these two leaf nodes into a single node, creating a new combined category. The paths from the root to each leaf node are given below. Additionally, all the tweets currently assigned to each leaf are listed as well. Please combine these two leaf nodes into one, and come up with a meaningful and descriptive name for the new combined node.
+
+  ### Path to Leaf 1:
+  {path_1}
+
+  ### Path to Leaf 2:
+  {path_2}
+
+  ### Tweets under the two leafs
+  {tweets}
+
+  ### Task:
+  1. Combine the tweets from both Leaf 1 and Leaf 2 into one cohesive category.
+  2. Please create a new name for the combined leaf that reflects the content of both sets of tweets.
+  3. The name should be descriptive, clear, and preferably shorter while still conveying the key themes of both Leaf 1 and Leaf 2.
+
+
+  OUTPUT
+  First, You must state the specific reason behind your combination.
+  Please provide a **concise response**, it tends to keep its reasoning process short.
+  Second, you should provide the new name for the combined leaf in a json format
+  Return the reason and your new name with the sturcture as follows:
+  your reasoning content
+  <\think>
+  ```json
+  {{
+    "name": "Leaf Name",
+  }}
+  ```
+
+leaf_split: |
+  I have built a system to categorize tweets, 
+  For each category of tweets, a multi-dimensional tree structure has been created, with a hierarchical division from broad to detailed classification criteria.
+  For simplicity, The structure of the tree is given as a list of all possible classification paths in this format:
+  EXAMPLE PATHS:
+  [
+    {{"path": "Technology > AI > Natural Language Processing"}},
+    {{"path": "Technology > Blockchain > Ethereum"}},
+    {{"path": "Business > Startups > Seed Funding"}}
+  ]
+  After the tree is built, the system will assign tweets to the leaf nodes based on the classification paths.
+  We have a leaf node that is overloaded with too many tweets. In order to balance the load and improve the structure of the tree, your task is to split this overloaded node into two new sub-nodes, creating two new leaf nodes under this original node. 
+  Please divide these tweets into two cohesive groups such that the distribution is approximately even, and each group reflects a distinct thematic cluster.
+  The paths from the root to the original leaf node is given below:
+  {path}
+  The tweets currently assigned to the original leaf node are listed below. 
+  {tweets}
+  OUTPUT
+  First, You must state the specific reason behind your split.
+  Please provide a **concise response**, it tends to keep its reasoning process short.
+  Second, you should provide the new name for the new leaf nodes in a json format
+  Return the reason and your new name with the sturcture as follows:
+  your reasoning content
+  <\think>
+  ```json
+  {{
+    "name1": "Leaf Name 1",
+    "name2": "Leaf Name 2"
+  }}
+  ```
+tweet_reassign: |
+  I have built a system to categorize tweets, 
+  For each category of tweets, a multi-dimensional tree structure has been created, with a hierarchical division from broad to detailed classification criteria.
+  For simplicity, The structure of the tree is given as a list of all possible classification paths in this format:
+  EXAMPLE PATHS:
+  [
+    {{"path": "Technology > AI > Natural Language Processing"}},
+    {{"path": "Technology > Blockchain > Ethereum"}},
+    {{"path": "Business > Startups > Seed Funding"}}
+  ]
+  After the tree is built, the system will assign tweets to the leaf nodes based on the classification paths.
+  Now, there are two new nodes added to the tree as subbranches of a initial leaf node, and the new classification paths are given as:
+  ### Path of new leaf 1:
+  {path_1}
+
+  ### Path of new leaf 2:
+  {path_2}
+
+  You will be gievn a tweet content and classify it to one of the new leaf nodes, i.e. select one classification path that best matches the tweet content.
+  ### Tweet content:
+  {tweet}
+  OUTPUT
+  First, You must state the specific reason behind your selection.
+  Please provide a **concise response**, it tends to keep its reasoning process short.
+  Second, you must select one path, if you think the tweet is not exactly related to any of the paths, please select the path that is most related to the tweet.
+  Do not return any **none** values
+  Third, you should output the selection result as the leaf name along with path index, which means you should only output your selection from the following map:
+  {idx_map}
+  Return the reason and your new name with the sturcture as follows:
+  your reasoning content
+  <\think>
+  ```json
+  {{
+    "path_idx":1
+    "name": "Leaf Name",
+  }}
+  ```
+
+  

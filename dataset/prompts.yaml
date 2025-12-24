@@ -1,0 +1,248 @@
+category_tree_prompt: |
+  You are a professional content classification system. Based on the following tweet samples for the category: **{category}**, generate a 4-5 level multi-dimensional hierarchical classification system:
+  【Structural Constraints】
+  1. **Balanced Branching**: 
+    - Each non-leaf node MUST have at least 2 child branches (3-5 recommended)
+    - No single-chain paths allowed (e.g. root→A→B→C→leaf without parallel branches)
+    - Child nodes should cover ≥80% of parent's samples
+
+  2. **Dimension Diversity**:
+    - Use completely different classification criteria at each level (e.g. L1:Content Field → L2:Content Style → L3:Creator Type)
+    - Prohibited: Reusing similar dimensions (e.g. "Topic→Sub-topic→Niche topic")
+
+  3. **Node Quality**:
+    - Leaf nodes must represent concrete classifications (no vague categories)
+    - Each branching level should distribute samples as evenly as possible (max 60%/min 40% split)
+
+  Tweet samples:
+  {sample_tweets}
+
+  Please adhere to the following guidelines:
+  1. For the "root" node, use the key "root" and set its value as the specific category name, i.e. root: category name.
+  2. "criteria" represents the classification criterion for the current node. If the node is a leaf node, neither `criteria` nor `sub_branches` are needed.
+  **3. Do not use the provided example directly, but rather build your own classification tree by analyzing the contents of tweet samples.**
+
+
+  
+  Return the result in JSON format. Example structure:
+  ```json
+  {{
+  "root": "Technology News", 
+  "criteria": "Field of News Reporting",
+  "sub_branches": [
+    {{
+      "name": "Artificial Intelligence",
+      "criteria": "Application Scenarios",
+      "sub_branches": [
+        {{
+          "name": ""Medical AI",
+          "criteria": "Technology Type",
+          "sub_branches": [...]  
+        }},
+        {{
+          "name": "Industrial AI",
+          "sub_branches": [...] 
+        }}
+      ]
+    }},
+    {{
+      "name": "Quantum Computing",
+      "criteria": "Development Stage",
+      "sub_branches": [
+        {{
+          "name": "Theoretical Research",
+          "criteria": "..."
+          "sub_branches": [...] 
+        }},
+        {{
+          "name": "Experimental Progress",
+          "criteria": "..."
+          "sub_branches": [...] 
+        }},
+        {{
+          "name": "Commercial Applications"  
+        }}
+      ]
+    }}
+  ]
+  }}
+  ```
+  
+
+tweet_classify_prompt: |
+  You are a professional content classification system, and your task is to classify tweets.
+  For each category of tweets, a multi-dimensional tree structure has been created, with a hierarchical division from broad to detailed classification criteria. Each leaf node has been assigned an ID.
+  The tree structure is organized as a nested hierarchical dict,with "sub_branches" as a list of dict for the children branches, for example:
+   {{
+  "root": "Technology News", 
+  "criteria": "Field of News Reporting",
+  "sub_branches": [
+    {{
+      "name": "Artificial Intelligence",
+      "criteria": "Application Scenarios",
+      "sub_branches": [
+        {{
+          "name": ""Medical AI",
+          "criteria": "Technology Type",
+          "sub_branches": [...]  
+        }},
+        {{
+          "name": "Industrial AI",
+          "sub_branches": [...] 
+        }}
+      ]
+    }},
+    ......
+  ]
+  }}
+  Given the tweet content within a specific category, please classify it into the appropriate leaf node and return the leaf node's name and ID.
+  In the tree structure, a branch is a leaf if and only if it is a dict with keys *name* and *id*
+  The leaf name should be strictly same as the "name" of the leaf node as provided in the category tree
+  Category classification tree:
+  {category_tree}
+  
+  Tweet content:
+  {tweet_content}
+
+  Please return the result in JSON format. Example structure:
+  ```json
+  {{
+    "name": "Convolutional Neural Networks (CNNs)"
+    "leaf_id" : 1
+  }}
+  ```
+  Please adhere to the following guidelines:
+  1. Do not use the provided example directly, but rather complete your own classification by analyzing the tree structure level by level, based on the given tweet content.
+  2. Provide a concise response, do not overthinking
+
+interaction_augmentation_prompt: 
+  category_selection: |
+    You will act as a professional tweet recommendation system. You will be provided with a user's profile information, their historical retweet records, and a list of candidate tweet categories.
+    Based on the user's information, you need to analyze the user's characteristics and preferences. Then, from the candidate categories, select {num_cats} categories that the user is likely to be interested in.
+    To make well-reasoned selections, consider the following:
+    1. If the user has interacted with certain categories before, assess if they are likely to engage with similar content again.
+    2. If the user has not interacted with certain categories, consider whether these categories align with the user's profile in a way that could suggest interest, even if they haven't engaged with them yet. This could include demographic or contextual factors (e.g., age, job, interests in related topics, etc.).
+    3. Aim to provide a mix of categories that include both the user’s established preferences and categories that offer potential for new exploration based on the user's characteristics and interests.
+
+    User profile information: 
+    {user_profile}
+    User interaction history:
+    {interaction_history}
+    Candidate tweet categories:
+    {candidate_categories}
+    
+    Please return the result in JSON format, with the following example structure:
+    ```json
+    {{
+      "categories":["Sports", "Entertainment"],
+    }}
+    ```
+    Do not include any extra text or information outside of the JSON structure.
+    Make sure the output is valid JSON, without any extra commas or characters.
+
+  
+  leaf_selection: |
+    TASK OVERVIEW:
+    You will act as a professional tweet recommendation system. You will be provided with:
+    1. User profile description
+    2.Candidate categories that the user might be interested in
+    3. Candidate categories with their classification paths 
+    
+    Suppose we know the tweet categories that a user may be interested in, Each category is organized using a hierarchical classification tree. 
+    For simplicity, The structure of the tree is given as a list of all possible classification paths in this format:
+    EXAMPLE PATHS:
+    [
+      {{"path": "Technology > AI > Natural Language Processing", "id": 101}},
+      {{"path": "Technology > Blockchain > Ethereum", "id": 205}},
+      {{"path": "Business > Startups > Seed Funding", "id": 302}}
+    ]
+    Based on the user's information, you need to analyze the user's characteristics and preferences. 
+    Then, from each candidate category, your task is to selec elect {num_leaves} classification paths that the user is likely to be interested in.
+
+    INPUTS:
+    User description: {user_profile}
+    Candidate categories that the user might be interested in: {candidate_categories}
+    Classification Paths for each candidate category: {leaf_paths}
+
+    OUTPUT REQUIREMENTS:
+    First, You must state the specific reason behind your selection. The reasoning content should end with <\think>
+    second, you should output the selection result as the leaf name along with leaf id (more explanation: leaf name is the last element in the path, leaf id is the id in the path). 
+    For each category, its leaf ids and corresponding names are collected in the following dictionaries: 
+    Note that your answer **must be contained in this dicts**:
+    {id_maps}
+    Third, you must select at least one leaf from each candidate category, do not return none values if you cannot find a suitable one, return the leaf that matches most
+    Please provide a **concise response**, it tends to keep its reasoning process short,and check whether your response satisfied the above requirements, especially that the names and ids are matched in the id_map dictionay
+    
+    OUTPUT FORMAT: return the response in the following structure:
+    your reasoning content
+    <\think>
+    ```json
+    [
+    {{
+        "category": "Technology",
+        "leaves": [
+            {{"id": 101, "name": "Natural Language Processing"}},
+            {{"id": 205, "name": "Ethereum"}},
+        ]
+    }},
+    {{
+        "category": "Business",
+        "leaves": [
+            {{"id": 302, "name": "Seed Funding"}},
+        ]
+    }}
+    ...
+    ]
+    ```
+    REMARKS:
+    Do not include any extra text or information outside of the JSON structure.
+    Make sure the output is valid JSON, without any extra commas or characters.
+  
+  
+
+
+
+tweet_classify_paths: |
+  You are an expert content classification system that categorizes tweets into a predefined taxonomy.
+  For each classification task, you will receive:
+  1. A list of all possible classification paths in this format:
+    [{{"path": "Root Category > Sub Category > ... > Leaf Category", "Leaf ID": 123}}, ...]
+  2. The tweet content to classify
+  Given the  tweet content, your task is to select the most relevant classification path, which covers the tweet's primary subject
+  
+  EXAMPLE PATHS:
+  [
+    {{"path": "Technology > AI > Natural Language Processing", "id": 101}},
+    {{"path": "Technology > Blockchain > Ethereum", "id": 205}},
+    {{"path": "Business > Startups > Seed Funding", "id": 302}}
+  ]
+  EXAMPLE TWEETS :
+  1. "New advances in transformer models for multilingual NLP"
+  2. "Our startup just raised $2M in seed funding"
+  
+  Now, the classification paths is given as follows:
+  {leaf_path}
+  The tweet to classify is given as follows:
+  {tweet_content}
+
+  OUTPUT REQUIREMENTS:
+  first, You must state the specific reason behind your selection. The reasoning content should end with <\think>
+  second, you should output the selection result as the leaf name along with leaf id, they are collected in the following dictionary as a leaf id to name dictionary. 
+  Note that your answer **must be contained in this dict**:
+  {id_map}
+  third, you must select one leaf, do not return none values if you cannot find a suitable one, return the leaf that matches most
+  Please provide a **concise response**, it tends to keep its reasoning process short,and check whether your response satisfied the above requirements, especially that the name is in the id_map dictionay
+  
+  Return the reason for your selection and the JSON with exact leaf Category name and leaf ID, with the following example structure::
+  your reasoning content
+  <\think>
+  ```json
+  {{
+    "name": "Leaf Name",
+    "leaf_id": 123     
+  }}
+  ```
+
+
+Test: |
+  

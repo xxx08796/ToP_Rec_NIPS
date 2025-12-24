@@ -1,0 +1,1152 @@
+[
+  {
+    "name": "Scientific Innovation & Technology",
+    "criteria": "Field of Research",
+    "sub_branches": [
+      {
+        "name": "Artificial Intelligence",
+        "criteria": "Research Focus",
+        "sub_branches": [
+          {
+            "name": "Machine Learning",
+            "criteria": "Application Domain",
+            "sub_branches": [
+              {
+                "name": "Natural Language Processing",
+                "sub_branches": [
+                  {
+                    "name": "Theoretical Advances in NLP & ML",
+                    "id": 1
+                  },
+                  {
+                    "name": "Practical Applications & Industry Developments",
+                    "id": 2
+                  }
+                ]
+              },
+              {
+                "name": "Computer Vision",
+                "id": 3
+              },
+              {
+                "name": "Reinforcement Learning",
+                "id": 4
+              }
+            ]
+          },
+          {
+            "name": "Neural Networks",
+            "criteria": "Network Type",
+            "sub_branches": [
+              {
+                "name": "Convolutional Neural Networks",
+                "id": 5
+              },
+              {
+                "name": "Recurrent Neural Networks",
+                "id": 6
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Biotechnology",
+        "criteria": "Research Specialization",
+        "sub_branches": [
+          {
+            "name": "Genomics",
+            "id": 7
+          },
+          {
+            "name": "Biotechnological Innovations",
+            "id": 8
+          }
+        ]
+      },
+      {
+        "name": "Neuroscience",
+        "criteria": "Research Topic",
+        "sub_branches": [
+          {
+            "name": "Cognitive Neuroscience",
+            "id": 9
+          },
+          {
+            "name": "Neural Circuits",
+            "id": 10
+          },
+          {
+            "name": "Neuroimaging",
+            "sub_branches": [
+              {
+                "name": "Technological Advancements in Neuroimaging",
+                "id": 11
+              },
+              {
+                "name": "Recruitment and Job Opportunities",
+                "id": 12
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "root": "Scientific Innovation & Technology"
+  },
+  {
+    "name": "Cultural Arts & Entertainment",
+    "criteria": "Content Field",
+    "sub_branches": [
+      {
+        "name": "Performing Arts",
+        "criteria": "Art Form",
+        "sub_branches": [
+          {
+            "name": "Music",
+            "criteria": "Music Genre",
+            "sub_branches": [
+              {
+                "name": "Pop Music",
+                "criteria": "Artist Type",
+                "sub_branches": [
+                  {
+                    "name": "Solo Artists",
+                    "sub_branches": [
+                      {
+                        "name": "Mainstream Pop Artists",
+                        "id": 1
+                      },
+                      {
+                        "name": "Independent Pop Artists",
+                        "id": 2
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Groups",
+                    "sub_branches": [
+                      {
+                        "name": "International Groups",
+                        "id": 3
+                      },
+                      {
+                        "name": "Domestic Groups",
+                        "id": 4
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Classical Music",
+                "id": 5
+              }
+            ]
+          },
+          {
+            "name": "Theater",
+            "criteria": "Theater Genre",
+            "sub_branches": [
+              {
+                "name": "Comedy",
+                "id": 6
+              },
+              {
+                "name": "Drama",
+                "sub_branches": [
+                  {
+                    "name": "Contemporary Drama",
+                    "id": 7
+                  },
+                  {
+                    "name": "Classical Drama",
+                    "id": 8
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Visual Arts",
+        "criteria": "Art Form",
+        "sub_branches": [
+          {
+            "name": "Digital Art",
+            "criteria": "Digital Medium",
+            "sub_branches": [
+              {
+                "name": "Graphic Design",
+                "id": 9
+              },
+              {
+                "name": "Digital Visual Art",
+                "id": 10
+              }
+            ]
+          },
+          {
+            "name": "Traditional Art",
+            "criteria": "Art Form",
+            "sub_branches": [
+              {
+                "name": "Painting",
+                "id": 11
+              },
+              {
+                "name": "Sculpture",
+                "id": 12
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Literature",
+        "criteria": "Literary Form",
+        "sub_branches": [
+          {
+            "name": "Fiction",
+            "criteria": "Genre",
+            "sub_branches": [
+              {
+                "name": "Fantasy",
+                "id": 13
+              },
+              {
+                "name": "Science Fiction",
+                "id": 14
+              }
+            ]
+          },
+          {
+            "name": "Non-Fiction",
+            "criteria": "Subject Matter",
+            "sub_branches": [
+              {
+                "name": "Biography",
+                "id": 15
+              },
+              {
+                "name": "History",
+                "id": 16
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "root": "Cultural Arts & Entertainment"
+  },
+  {
+    "name": "Lifestyle & Personal Development",
+    "criteria": "Content Field",
+    "sub_branches": [
+      {
+        "name": "Personal Growth",
+        "criteria": "Content Style",
+        "sub_branches": [
+          {
+            "name": "Narrative Sharing",
+            "criteria": "Creator Type",
+            "sub_branches": [
+              {
+                "name": "Personal Stories",
+                "sub_branches": [
+                  {
+                    "name": "Personal Growth Reflections",
+                    "id": 1
+                  },
+                  {
+                    "name": "Personal Moments & Events",
+                    "id": 2
+                  }
+                ]
+              },
+              {
+                "name": "Professional Reflections",
+                "id": 3
+              }
+            ]
+          },
+          {
+            "name": "Advice and Tips",
+            "criteria": "Creator Type",
+            "sub_branches": [
+              {
+                "name": "Educational Content",
+                "id": 4
+              },
+              {
+                "name": "Anecdotal Advice",
+                "sub_branches": [
+                  {
+                    "name": "Mental Health Tips",
+                    "id": 5
+                  },
+                  {
+                    "name": "Skill Development Advice",
+                    "id": 6
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Social Media Management",
+        "criteria": "Content Style",
+        "sub_branches": [
+          {
+            "name": "Privacy and Security",
+            "criteria": "Creator Type",
+            "id": 7
+          },
+          {
+            "name": "Community Engagement",
+            "criteria": "Creator Type",
+            "id": 8
+          }
+        ]
+      },
+      {
+        "name": "Life Events and Milestones",
+        "criteria": "Content Style",
+        "sub_branches": [
+          {
+            "name": "Career Transitions",
+            "criteria": "Creator Type",
+            "id": 9
+          },
+          {
+            "name": "Personal Moments",
+            "criteria": "Creator Type",
+            "sub_branches": [
+              {
+                "name": "Family News",
+                "id": 10
+              },
+              {
+                "name": "Personal Achievements",
+                "id": 11
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "root": "Lifestyle & Personal Development"
+  },
+  {
+    "name": "Education & Learning Systems",
+    "criteria": "Type of Content",
+    "sub_branches": [
+      {
+        "name": "Educational Programs",
+        "criteria": "Level of Education",
+        "sub_branches": [
+          {
+            "name": "Undergraduate Programs",
+            "criteria": "Field of Study",
+            "sub_branches": [
+              {
+                "name": "Computer Science",
+                "id": 1
+              },
+              {
+                "name": "Psychology",
+                "id": 2
+              },
+              {
+                "name": "Neuroscience",
+                "id": 3
+              }
+            ]
+          },
+          {
+            "name": "Graduate Programs",
+            "criteria": "Academic Focus",
+            "sub_branches": [
+              {
+                "name": "PhD Research",
+                "sub_branches": [
+                  {
+                    "name": "PhD Completion and Achievements",
+                    "id": 4
+                  },
+                  {
+                    "name": "PhD Applications and Opportunities",
+                    "id": 5
+                  }
+                ]
+              },
+              {
+                "name": "Coursework-Based",
+                "id": 6
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Learning Resources",
+        "criteria": "Format of Content",
+        "sub_branches": [
+          {
+            "name": "Online Courses",
+            "criteria": "Audience",
+            "sub_branches": [
+              {
+                "name": "General Public",
+                "sub_branches": [
+                  {
+                    "name": "Skill Development Courses",
+                    "id": 7
+                  },
+                  {
+                    "name": "Academic Learning Courses",
+                    "id": 8
+                  }
+                ]
+              },
+              {
+                "name": "Academic Community",
+                "sub_branches": [
+                  {
+                    "name": "Educational Content & Resources",
+                    "id": 9
+                  },
+                  {
+                    "name": "Academic Practices & Social Issues",
+                    "id": 10
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Books",
+            "criteria": "Subject Matter",
+            "id": 11
+          },
+          {
+            "name": "Workshops",
+            "criteria": "Specialization",
+            "id": 12
+          }
+        ]
+      },
+      {
+        "name": "Career Development",
+        "criteria": "Pathway Focus",
+        "sub_branches": [
+          {
+            "name": "Academic Positions",
+            "criteria": "Seniority Level",
+            "sub_branches": [
+              {
+                "name": "Assistant Professor",
+                "sub_branches": [
+                  {
+                    "name": "Assistant Professor Achievements",
+                    "id": 13
+                  },
+                  {
+                    "name": "Academic Life & Challenges",
+                    "id": 14
+                  }
+                ]
+              },
+              {
+                "name": "Full Professor",
+                "id": 15
+              }
+            ]
+          },
+          {
+            "name": "Industry Roles",
+            "criteria": "Sector",
+            "id": 16
+          },
+          {
+            "name": "Research Opportunities",
+            "criteria": "Type of Research",
+            "id": 17
+          }
+        ]
+      }
+    ],
+    "root": "Education & Learning Systems"
+  },
+  {
+    "name": "Public Health & Well-being",
+    "criteria": "Content Field",
+    "sub_branches": [
+      {
+        "name": "Healthcare Policy and Practices",
+        "criteria": "Policy Focus",
+        "sub_branches": [
+          {
+            "name": "Vaccination Policies",
+            "criteria": "Geographic Focus",
+            "sub_branches": [
+              {
+                "name": "Global Vaccination Policies",
+                "id": 1
+              },
+              {
+                "name": "National and Local Policies",
+                "sub_branches": [
+                  {
+                    "name": "National Policy Implementation",
+                    "id": 2
+                  },
+                  {
+                    "name": "Public Response to Vaccination Policies",
+                    "id": 3
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Public Health Measures (e.g., Mask Wearing, Quarantine)",
+            "criteria": "Implementation Context",
+            "sub_branches": [
+              {
+                "name": "During Pandemic",
+                "sub_branches": [
+                  {
+                    "name": "Personal Experiences and Recommendations",
+                    "id": 4
+                  },
+                  {
+                    "name": "Public Health Policies and Governmental Actions",
+                    "id": 5
+                  }
+                ]
+              },
+              {
+                "name": "General Public Health Measures",
+                "id": 6
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Medical Research and Discoveries",
+        "criteria": "Area of Research",
+        "sub_branches": [
+          {
+            "name": "Virology and Virus Studies",
+            "criteria": "Specific Virus",
+            "sub_branches": [
+              {
+                "name": "SARS-CoV-2 and Variants",
+                "sub_branches": [
+                  {
+                    "name": "SARS-CoV-2 Biology and Genetics",
+                    "id": 7
+                  },
+                  {
+                    "name": "Public Health Responses to SARS-CoV-2",
+                    "id": 8
+                  }
+                ]
+              },
+              {
+                "name": "Other Coronaviruses",
+                "id": 9
+              }
+            ]
+          },
+          {
+            "name": "Treatment and Prevention Methods",
+            "criteria": "Type of Method",
+            "sub_branches": [
+              {
+                "name": "Pharmaceutical Interventions",
+                "id": 10
+              },
+              {
+                "name": "Non-Pharmaceutical Interventions (e.g., Ventilation)",
+                "id": 11
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Patient Experiences and Long-term Effects",
+        "criteria": "Type of Experience",
+        "sub_branches": [
+          {
+            "name": "Acute and Chronic Illness Experiences",
+            "criteria": "Specific Illness",
+            "sub_branches": [
+              {
+                "name": "COVID-19",
+                "sub_branches": [
+                  {
+                    "name": "Medical Aspects of COVID-19",
+                    "id": 12
+                  },
+                  {
+                    "name": "Personal and Societal Impacts of COVID-19",
+                    "id": 13
+                  }
+                ]
+              },
+              {
+                "name": "Other Acute and Chronic Conditions",
+                "id": 14
+              }
+            ]
+          },
+          {
+            "name": "Recovery and Aftermath",
+            "criteria": "Type of Recovery",
+            "id": 15
+          }
+        ]
+      },
+      {
+        "name": "Healthcare System Operations",
+        "criteria": "Aspect of Operations",
+        "sub_branches": [
+          {
+            "name": "Hospital and Clinic Operations",
+            "criteria": "Type of Service",
+            "id": 16
+          },
+          {
+            "name": "Human Resources and Staffing",
+            "criteria": "Focus of Discussion",
+            "id": 17
+          }
+        ]
+      },
+      {
+        "name": "Health Education and Awareness",
+        "criteria": "Type of Education",
+        "sub_branches": [
+          {
+            "name": "Public Health Campaigns",
+            "criteria": "Target Audience",
+            "id": 18
+          },
+          {
+            "name": "Scientific Communication and Research Dissemination",
+            "criteria": "Medium of Communication",
+            "id": 19
+          }
+        ]
+      }
+    ],
+    "root": "Public Health & Well-being"
+  },
+  {
+    "name": "Business & Economic Systems",
+    "criteria": "Content Field",
+    "sub_branches": [
+      {
+        "name": "Business Management",
+        "criteria": "Managerial Focus",
+        "sub_branches": [
+          {
+            "name": "Remote Management",
+            "criteria": "Management Tools",
+            "id": 1
+          },
+          {
+            "name": "Team Dynamics",
+            "criteria": "Change Management",
+            "sub_branches": [
+              {
+                "name": "Organizational Culture",
+                "sub_branches": [
+                  {
+                    "name": "Organizational Culture > Cultural Practices",
+                    "id": 2
+                  },
+                  {
+                    "name": "Organizational Culture > Leadership Impact",
+                    "id": 3
+                  }
+                ]
+              },
+              {
+                "name": "Employee Engagement",
+                "id": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Economic Policy",
+        "criteria": "Policy Domain",
+        "sub_branches": [
+          {
+            "name": "Fiscal Policy",
+            "criteria": "Policy Impact",
+            "sub_branches": [
+              {
+                "name": "Taxation",
+                "sub_branches": [
+                  {
+                    "name": "Direct Taxation",
+                    "id": 5
+                  },
+                  {
+                    "name": "Indirect Taxation",
+                    "id": 6
+                  }
+                ]
+              },
+              {
+                "name": "Government Spending",
+                "sub_branches": [
+                  {
+                    "name": "Government Spending > Domestic Spending",
+                    "id": 7
+                  },
+                  {
+                    "name": "Government Spending > Military Spending",
+                    "id": 8
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Monetary Policy",
+            "criteria": "Inflation Control",
+            "id": 9
+          }
+        ]
+      },
+      {
+        "name": "Technology Economics",
+        "criteria": "Technology Sector",
+        "sub_branches": [
+          {
+            "name": "Blockchain and Cryptocurrency",
+            "criteria": "Market Dynamics",
+            "sub_branches": [
+              {
+                "name": "Cryptocurrency Trading",
+                "id": 10
+              },
+              {
+                "name": "Blockchain Applications",
+                "id": 11
+              }
+            ]
+          },
+          {
+            "name": "Software Development",
+            "criteria": "Hiring Practices",
+            "sub_branches": [
+              {
+                "name": "Recruitment Techniques",
+                "sub_branches": [
+                  {
+                    "name": "Technical Recruitment",
+                    "id": 12
+                  },
+                  {
+                    "name": "General Recruitment Practices",
+                    "id": 13
+                  }
+                ]
+              },
+              {
+                "name": "Developer Compensation",
+                "id": 14
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "root": "Business & Economic Systems"
+  },
+  {
+    "name": "Political Systems & Governance",
+    "criteria": "Type of Political Issues",
+    "sub_branches": [
+      {
+        "name": "Governmental Actions and Decisions",
+        "criteria": "Nature of the Governmental Action",
+        "sub_branches": [
+          {
+            "name": "Policy Decisions",
+            "criteria": "Policy Area",
+            "sub_branches": [
+              {
+                "name": "Healthcare Policy",
+                "id": 1
+              },
+              {
+                "name": "Policy Decisions: Tax & Environment",
+                "id": 2
+              }
+            ]
+          },
+          {
+            "name": "Public Statements",
+            "sub_branches": [
+              {
+                "name": "General Political Statements and Public Figures",
+                "id": 3
+              },
+              {
+                "name": "Critiques and Negative Reactions to Government Actions",
+                "id": 4
+              }
+            ]
+          },
+          {
+            "name": "Corruption Allegations",
+            "sub_branches": [
+              {
+                "name": "Specific Political Figure Corruption Allegations",
+                "id": 5
+              },
+              {
+                "name": "Broader Governance and Law Enforcement Issues",
+                "id": 6
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Political Figures and Leadership",
+        "criteria": "Type of Political Figure",
+        "sub_branches": [
+          {
+            "name": "Prime Ministers and Presidents",
+            "criteria": "Leadership Actions",
+            "sub_branches": [
+              {
+                "name": "Policy Implementation",
+                "id": 7
+              },
+              {
+                "name": "Political Crisis and Response",
+                "id": 8
+              }
+            ]
+          },
+          {
+            "name": "Opposition Leaders",
+            "id": 9
+          },
+          {
+            "name": "Ministers and Cabinet Members",
+            "id": 10
+          }
+        ]
+      },
+      {
+        "name": "Political Events and Controversies",
+        "criteria": "Type of Event",
+        "sub_branches": [
+          {
+            "name": "Parties and Gatherings",
+            "id": 11
+          },
+          {
+            "name": "Protests and Demonstrations",
+            "id": 12
+          },
+          {
+            "name": "Parliamentary Proceedings",
+            "id": 13
+          }
+        ]
+      }
+    ],
+    "root": "Political Systems & Governance"
+  },
+  {
+    "name": "Social Justice & Equity",
+    "criteria": "Content Field",
+    "sub_branches": [
+      {
+        "name": "Human Rights",
+        "criteria": "Focus Area",
+        "sub_branches": [
+          {
+            "name": "Racial Justice",
+            "criteria": "Event Type",
+            "sub_branches": [
+              {
+                "name": "Historical Reckoning",
+                "sub_branches": [
+                  {
+                    "name": "Legal and Policy Actions",
+                    "id": 1
+                  },
+                  {
+                    "name": "Cultural and Educational Initiatives",
+                    "id": 2
+                  }
+                ]
+              },
+              {
+                "name": "Contemporary Activism",
+                "sub_branches": [
+                  {
+                    "name": "Contemporary Activism and Current Events",
+                    "id": 3
+                  },
+                  {
+                    "name": "Theoretical and Academic Discussions",
+                    "id": 4
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Gender Equity",
+            "criteria": "Subject Matter",
+            "sub_branches": [
+              {
+                "name": "Women's Rights",
+                "sub_branches": [
+                  {
+                    "name": "Legal Rights",
+                    "id": 5
+                  },
+                  {
+                    "name": "Social Rights",
+                    "id": 6
+                  }
+                ]
+              },
+              {
+                "name": "LGBTQ+ Rights",
+                "id": 7
+              }
+            ]
+          },
+          {
+            "name": "Ethnic Minorities",
+            "criteria": "Thematic Area",
+            "id": 8
+          }
+        ]
+      },
+      {
+        "name": "Social Inequality",
+        "criteria": "Type of Inequality",
+        "sub_branches": [
+          {
+            "name": "Economic Inequality",
+            "criteria": "Form of Economic Disparity",
+            "sub_branches": [
+              {
+                "name": "Income Disparity",
+                "id": 9
+              },
+              {
+                "name": "Wealth Distribution",
+                "id": 10
+              }
+            ]
+          },
+          {
+            "name": "Education Inequality",
+            "criteria": "Level of Education",
+            "id": 11
+          },
+          {
+            "name": "Health Inequality",
+            "criteria": "Healthcare Access",
+            "id": 12
+          }
+        ]
+      },
+      {
+        "name": "Technology and Equity",
+        "criteria": "Ethical Considerations",
+        "sub_branches": [
+          {
+            "name": "Bias in AI",
+            "criteria": "Nature of Bias",
+            "sub_branches": [
+              {
+                "name": "Algorithmic Bias",
+                "id": 13
+              },
+              {
+                "name": "Data Bias",
+                "id": 14
+              }
+            ]
+          },
+          {
+            "name": "Equity in Tech Development",
+            "criteria": "Tech Community",
+            "sub_branches": [
+              {
+                "name": "Diversity & Inclusion",
+                "sub_branches": [
+                  {
+                    "name": "Technical Diversity & Inclusion",
+                    "id": 15
+                  },
+                  {
+                    "name": "Social Impact of Diversity & Inclusion",
+                    "id": 16
+                  }
+                ]
+              },
+              {
+                "name": "Community-led Development",
+                "id": 17
+              }
+            ]
+          },
+          {
+            "name": "Impact of Tech on Society",
+            "criteria": "Social Impact",
+            "sub_branches": [
+              {
+                "name": "Positive Social Impact",
+                "id": 18
+              },
+              {
+                "name": "Negative Social Impact",
+                "id": 19
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "root": "Social Justice & Equity"
+  },
+  {
+    "name": "Environmental Sustainability & Conservation",
+    "criteria": "Content Field",
+    "sub_branches": [
+      {
+        "name": "Climate Change",
+        "criteria": "Type of Content",
+        "sub_branches": [
+          {
+            "name": "Scientific Research",
+            "criteria": "Content Source",
+            "sub_branches": [
+              {
+                "name": "Academic Publications",
+                "id": 1
+              },
+              {
+                "name": "Public Statements",
+                "sub_branches": [
+                  {
+                    "name": "Scientist Statements",
+                    "id": 2
+                  },
+                  {
+                    "name": "Policy Maker Statements",
+                    "id": 3
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Policy and Advocacy",
+            "criteria": "Target Audience",
+            "sub_branches": [
+              {
+                "name": "General Public",
+                "sub_branches": [
+                  {
+                    "name": "Political Engagement",
+                    "id": 4
+                  },
+                  {
+                    "name": "Public Awareness and Education",
+                    "id": 5
+                  }
+                ]
+              },
+              {
+                "name": "Policy Makers",
+                "sub_branches": [
+                  {
+                    "name": "International Policy Makers",
+                    "id": 6
+                  },
+                  {
+                    "name": "National Policy Makers",
+                    "id": 7
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pollution and Waste Management",
+        "criteria": "Type of Pollutant",
+        "sub_branches": [
+          {
+            "name": "Chemical Pollution",
+            "criteria": "Pollution Source",
+            "id": 8
+          },
+          {
+            "name": "Plastic Pollution",
+            "criteria": "Geographical Impact",
+            "sub_branches": [
+              {
+                "name": "Desertic",
+                "id": 9
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Biodiversity and Conservation",
+        "criteria": "Subject Focus",
+        "sub_branches": [
+          {
+            "name": "Animal Conservation",
+            "criteria": "Threat Type",
+            "sub_branches": [
+              {
+                "name": "Habitat Loss",
+                "id": 10
+              },
+              {
+                "name": "Human Disturbance",
+                "id": 11
+              }
+            ]
+          },
+          {
+            "name": "Plant Conservation",
+            "criteria": "Protection Method",
+            "id": 12
+          }
+        ]
+      }
+    ],
+    "root": "Environmental Sustainability & Conservation"
+  }
+]
